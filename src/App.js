@@ -4,18 +4,29 @@ import { bindActionCreators } from 'redux';
 
 import getChatLog from './service';
 
+import MessageList from './components/MessageList';
+
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+      this.props.getChatLog();
+  }
   render() {
     return (
-      <h1>Hello!</h1>
+      <div>
+          <h1>Hello!</h1>
+          <h2>Messages</h2>
+          <MessageList messages={this.props.messages} />
+      </div>
     );
   }
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+      messages : state.messages
+  };
 };
 
 const mapDispatchToProps = dispatch => bindActionCreators({ getChatLog }, dispatch);
