@@ -2,7 +2,6 @@ import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise-middleware';
 
 export function reducer(state, action = {}) {
-    console.log('action type', action.type)
     switch (action.type) {
         case 'MESSAGES_LOADING_FULFILLED':
             return Object.assign({}, state, {

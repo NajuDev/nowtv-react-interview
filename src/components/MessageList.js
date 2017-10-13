@@ -14,7 +14,7 @@ const MessageItem = ({
     const memberDetails = members.find( (member) => member.id === author);
     const dateStamp = (new Date(time)).toLocaleString('en-GB');
     return (
-        <li key={id} id={id} onMouseOver={() => { console.log(author) }} className="App-msg-item">
+        <li key={id} id={id} className="App-msg-item">
             <p>
                 <UserAvatar img={memberDetails.avatar /* || 'placeholder.image'*/} name={ `${memberDetails.firstName} ${memberDetails.lastName}` } />
                 {body}
