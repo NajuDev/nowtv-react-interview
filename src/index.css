@@ -1,0 +1,15 @@
+.App-msgs {
+
+}
+
+.App-msg-item {
+
+}
+    .App-msg-item:hover > .App-msg-email {
+        opacity: 1;
+    }
+
+.App-msg-email {
+    opacity: 0;
+    transition: opacity 250ms;
+}
